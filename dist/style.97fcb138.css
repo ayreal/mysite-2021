@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Kumbh Sans Regular";
+  src: url("/KumbhSans-Regular.2471328d.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Kumbh Sans Bold";
+  src: url("/KumbhSans-Bold.a446544d.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Amiri Regular";
+  src: url("/Amiri-Regular.484b6268.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Julius Sans One Regular";
+  src: url("/JuliusSansOne-Regular.9ddeffd8.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f74b;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  color: #011627;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    flex-direction: row-reverse;
+  }
+}
+
+.block {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  font-family: "Kumbh Sans Bold", sans-serif;
+  width: 100%;
+  margin: 20px 20px 10px;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    width: unset;
+    justify-content: flex-start;
+    writing-mode: vertical-rl;
+    margin: 50px 20px 0;
+  }
+}
+
+#image {
+  background-image: url("/me-morocco-sm.b90c6e82.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%, contain;
+  width: 100%;
+  height: 33vh;
+}
+@media only screen and (min-width: 768px) {
+  #image {
+    background-image: url("/me-morocco-lg.7731b4ec.jpg");
+    background-position: top center;
+    flex: 1 1 auto;
+    width: 50vw;
+    height: 75%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #image {
+    height: 100%;
+    background-position: center center;
+  }
+}
+
+#info {
+  flex: 1 1 280px;
+  padding: 0 20px;
+  font-family: "Kumbh Sans Regular", sans-serif;
+}
+@media only screen and (min-width: 768px) {
+  #info {
+    padding: 20px;
+  }
+}
+
+h1 {
+  position: absolute;
+  bottom: 10px;
+  font-family: "Julius Sans One Regular", serif;
+  color: #f9f74b;
+  font-size: 36px;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    position: static;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  h1 {
+    position: absolute;
+    font-size: 55px;
+    bottom: 10px;
+    right: 45px;
+  }
+}
+
+h2,
+strong {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Kumbh Sans Bold", sans-serif;
+}
+@media only screen and (min-width: 1024px) {
+  h2,
+strong {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #011627;
+}
+@media only screen and (min-width: 1024px) {
+  p {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+h2 + p {
+  font-family: "Amiri Regular", serif;
+}
+
+#info a {
+  white-space: nowrap;
+}
+
+a:link,
+a:visited {
+  background: linear-gradient(to bottom, #00afb9 0%, #00afb9 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #011627;
+  text-decoration: none;
+  transition: background-size 0.3s;
+}
+
+a:active,
+a:hover {
+  background-size: 4px 50px;
+}
+
+nav a {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  nav a {
+    margin-bottom: 20px;
+  }
+}
+
+.highlight {
+  background: #011627;
+  padding: 3px 25px;
+  margin: -3px 0;
+  line-height: 1.5;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

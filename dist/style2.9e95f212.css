@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Kumbh Sans Regular";
+  src: url("/KumbhSans-Regular.2471328d.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Kumbh Sans Bold";
+  src: url("/KumbhSans-Bold.a446544d.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Amiri Regular";
+  src: url("/Amiri-Regular.484b6268.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Julius Sans One Regular";
+  src: url("/JuliusSansOne-Regular.9ddeffd8.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f74b;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+body > * {
+  border: 2px dotted black;
+}
+
+/*# sourceMappingURL=/style2.9e95f212.css.map */

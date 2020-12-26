@@ -1,0 +1,196 @@
+// Settings
+
+@font-face {
+    font-family: 'Kumbh Sans Regular';
+    src: url('./assets/KumbhSans-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Kumbh Sans Bold';
+    src: url('./assets/KumbhSans-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Amiri Regular';
+    src: url('./assets/Amiri-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Julius Sans One Regular';
+    src: url('./assets/JuliusSansOne-Regular.ttf') format('truetype');
+  }
+
+  $font-sans-regular: 'Kumbh Sans Regular', sans-serif;
+  $font-sans-bold: 'Kumbh Sans Bold', sans-serif;
+  $font-serif-regular: 'Amiri Regular', serif;
+  $font-title: 'Julius Sans One Regular', serif;
+
+  @mixin main-font-scale {
+    font-size: 16px;
+    line-height: 28px;
+
+    @media only screen and (min-width: 1024px) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  // Colors
+
+  $yellow: #f9f74b;
+  $black: #011627;
+  $blue: #0081a7;
+  $turquoise: #00afb9;
+  $salmon: #f07167;
+
+  // Layout
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: $yellow;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    color: $black;
+
+    @media only screen and (min-width: 768px) {
+      height: 100vh;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .block {
+    position: relative;
+  }
+
+  nav {
+    display: flex;
+    font-family: $font-sans-bold;
+    width: 100%;
+    margin: 20px 20px 10px;
+    justify-content: space-between;
+
+    @media only screen and (min-width: 768px) {
+      width: unset;
+      justify-content: flex-start; // look
+      writing-mode: vertical-rl;
+      margin: 50px 20px 0;
+    }
+  }
+
+  #image {
+    background-image: url("./assets/me-morocco-sm.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%, contain;
+    width: 100%;
+    height: 33vh;
+
+    @media only screen and (min-width: 768px) {
+      background-image: url("./assets/me-morocco-lg.jpg");
+      background-position: top center;
+      flex: 1 1 auto;
+      width: 50vw;
+      height: 75%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      height: 100%;
+      background-position: center center;
+    }
+  }
+
+  #info {
+    flex: 1 1 280px;
+    padding: 0 20px;
+    font-family: $font-sans-regular;
+
+    @media only screen and (min-width: 768px) {
+      padding: 20px;
+    }
+  }
+
+  // Typography
+
+  h1 {
+    position: absolute;
+    bottom: 10px;
+    font-family: $font-title;
+    color: $yellow;
+    font-size: 36px;
+
+    @media only screen and (min-width: 768px) {
+      position: static;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      position: absolute;
+      font-size: 55px;
+      bottom: 10px;
+      right: 45px;
+    }
+  }
+
+  h2,
+  strong {
+    @include main-font-scale;
+
+    font-family: $font-sans-bold;
+  }
+
+  p {
+    @include main-font-scale;
+
+    padding: 0 0 20px;
+    border-bottom: 1px solid $black;
+  }
+
+  h2 + p {
+    font-family: $font-serif-regular;
+  }
+
+  #info a {
+    white-space: nowrap;
+  }
+
+  a:link,
+  a:visited {
+    background:
+      linear-gradient(
+        to bottom,
+        $turquoise 0%,
+        $turquoise 100%
+      );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: $black;
+    text-decoration: none;
+    transition: background-size 0.3s;
+  }
+
+  a:active,
+  a:hover {
+    background-size: 4px 50px;
+  }
+
+  nav a {
+    display: block;
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .highlight {
+    background: $black;
+    padding: 3px 25px;
+    margin: -3px 0;
+    line-height: 1.5;
+    display: inline-block;
+  }
